@@ -1,0 +1,173 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border2"
+    android:weightSum="100"
+    tools:context="com.example.muteme.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/lL1"
+        android:layout_width="wrap_content"
+        android:layout_height="67dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/customborder"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bDateFrom"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_weight="50"
+            android:background="@drawable/round_corner"
+            android:text="From"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bDateTo"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/bDateFrom"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/bDateFrom"
+            android:layout_weight="50"
+            android:background="@drawable/round_corner"
+            android:text="To"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bGo"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/bDateTo"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/bDateTo"
+            android:layout_weight="50"
+            android:background="@drawable/round_corner"
+            android:onClick="ShowDate"
+            android:text="Go"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:scrollbars="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/RR2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TableLayout
+                android:id="@+id/TL1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp" >
+            </TableLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/lL2"
+        android:layout_width="wrap_content"
+        android:layout_height="67dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/customborder"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bBack"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/bGo"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/bGo"
+            android:layout_weight="50"
+            android:background="@drawable/round_corner"
+            android:text="Back"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bClear"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/bBack"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/bBack"
+            android:layout_weight="50"
+            android:background="@drawable/round_corner"
+            android:onClick="ClearDates"
+            android:text="Clear"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/lL1"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tvFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDateFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/scrollView1"
+        android:layout_below="@+id/linearLayout1"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tvTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDateTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border2"
+    android:weightSum="100"
+    tools:context="com.example.muteme.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/customborder"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/ibAdd"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_weight="50"
+            android:background="@drawable/round_corner"
+            android:drawableLeft="@drawable/addevent"
+            android:text="Create"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/ibCalender"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/ibAdd"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/ibAdd"
+            android:layout_weight="50"
+            android:background="@drawable/round_corner"
+            android:drawableLeft="@drawable/calendar"
+            android:src="@drawable/calendar"
+            android:text="View Events"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bDelete"
+            android:onClick="DeleteDb"
+            android:layout_width="30dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/ibCal"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/ibCal"
+            android:layout_weight="30"
+            android:background="@drawable/round_corner"
+            android:text="C"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Upcoming Events"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:scrollbars="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="400dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp" >
+            </TableLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
