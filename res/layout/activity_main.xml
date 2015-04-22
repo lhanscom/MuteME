@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/border2"
     android:weightSum="100"
-    tools:context=".Screen" >
+    tools:context="com.example.muteme.MainActivity" >
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -56,22 +56,6 @@
             android:background="@drawable/round_corner"
             android:text="C"
             android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/ibWifi"
-            android:layout_width="40dp"
-            android:layout_height="45dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/ibAdd"
-            android:layout_marginTop="10dp"
-            android:layout_toRightOf="@+id/ibAdd"
-            android:layout_weight="50"
-            android:background="@drawable/round_corner"
-            android:drawableLeft="@drawable/round_corner"
-            android:src="@drawable/calendar"
-            android:text="Wifi"
-            android:textStyle="bold" />
-
     </LinearLayout>
 
     <TextView

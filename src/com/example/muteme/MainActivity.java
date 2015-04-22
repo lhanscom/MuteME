@@ -700,19 +700,6 @@ public class MainActivity extends Activity {
 
 	}
 
-    public void listenWifi() {
-
-        String s_temp = "a";
-
-        Intent intentAlarmIn = new Intent(this, MyWifiReceiver.class);
-        intentAlarmIn.setData(Uri.parse(s_temp));
-
-        AlarmManager inAlarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-        inAlarmManager.cancel(PendingIntent.getBroadcast(this, 1,
-                intentAlarmIn, 0));
-
-    }
-
 	public void setSound(int iNum) {
 
 		String id = sqlDbAdaptor.getRow("" + iNum);

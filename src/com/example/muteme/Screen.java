@@ -14,10 +14,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
-import android.net.wifi.WifiInfo;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
@@ -160,29 +157,7 @@ public class Screen extends Activity {
 			}
 		});
 
-        Button bMyWifi = (Button) findViewById(R.id.ibWifi);
-
-        bMyWifi.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-
-                ConnectivityManager cm =
-                        (ConnectivityManager)v.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-
-                NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-                boolean isConnected = activeNetwork != null &&
-                        activeNetwork.isConnectedOrConnecting();
-                boolean isWifi = activeNetwork.getType() == ConnectivityManager.TYPE_WIFI;
-
-
-
-            }
-        });
-
-
-        sqlDbAdaptor = new SQLiteDbAdaptor(this);
+		sqlDbAdaptor = new SQLiteDbAdaptor(this);
 
 		String id = null;
 
