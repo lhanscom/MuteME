@@ -10,6 +10,8 @@
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -48,19 +50,23 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.example.muteme.SCREEN" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <service
             android:name="com.example.muteme.MyAlarmService"
             android:enabled="true" />
         <service
             android:name="com.example.muteme.MyEndService"
             android:enabled="true" />
+        <service android:name="com.example.muteme.MyWifiService" android:enabled="true" />
 
         <receiver android:name="com.example.muteme.MyReceiver" />
         <receiver android:name="com.example.muteme.MyEnder" />
+        <receiver android:name="com.example.muteme.MyWifiReceiver" />
     </application>
 
 </manifest>
